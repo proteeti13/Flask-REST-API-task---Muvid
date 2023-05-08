@@ -1,0 +1,279 @@
+{
+	"info": {
+		"_postman_id": "ad409225-dd54-440a-b235-7af6b2841e1c",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7533708"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:5000/employees",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"proteeti\",\r\n    \"department\": \"IT\",\r\n    \"salary\": 6565.0,\r\n    \"hire_date\": \"2022-05-09 10:30:00\"\r\n \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/employees",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"employees"
+					]
+				},
+				"description": "for adding new employees"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:5000/employees",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/employees",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"employees"
+					]
+				},
+				"description": "Get all employees"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:5000/employees/4",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/employees/4",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"employees",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:5000/employees/4",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"NARUTO\",\r\n    \"department\": \"IT\",\r\n    \"salary\": 6565.0,\r\n    \"hire_date\": \"2022-05-09 10:30:00\"\r\n \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/employees/4",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"employees",
+						"4"
+					]
+				},
+				"description": "update a specific employee"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:5000/employees/78",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/employees/78",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"employees",
+						"78"
+					]
+				},
+				"description": "delete an employee with a specific ID"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:5000/departments",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/departments",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"departments"
+					]
+				},
+				"description": "get all unique departmenrts"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:5000/departments/Hydrologist",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/departments/Hydrologist",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"departments",
+						"Hydrologist"
+					]
+				},
+				"description": "Returns a list of all employees in the specified department."
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:5000/average_salary/Hydrologist",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/average_salary/Hydrologist",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"average_salary",
+						"Hydrologist"
+					]
+				},
+				"description": "avg salary of a single department"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:5000/top_earners",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/top_earners",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"top_earners"
+					]
+				},
+				"description": "top 10 salary people"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:5000/most_recent_hires",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/most_recent_hires",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"most_recent_hires"
+					]
+				},
+				"description": "10 latest joined people"
+			},
+			"response": []
+		}
+	]
+}
