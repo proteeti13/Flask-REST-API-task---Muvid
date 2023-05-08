@@ -274,6 +274,38 @@
 				"description": "10 latest joined people"
 			},
 			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:5000/predict_salary",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"department\": \"department_Systems analyst\",\r\n    \"hire_date\": \"2022-05-09 10:30:00\",\r\n    \"job_title\": \"senior_engineer\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/predict_salary",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"predict_salary"
+					]
+				},
+				"description": "for predicting salary"
+			},
+			"response": []
 		}
 	]
 }
