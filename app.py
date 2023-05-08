@@ -190,7 +190,7 @@ def get_most_recent_hires():
 
 fake = Faker()
 
-for i in range(1000):
+for i in range(1500):
     employee = Employee(
         name=fake.name(),
         department=fake.job(),
